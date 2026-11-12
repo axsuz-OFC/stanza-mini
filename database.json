@@ -1,0 +1,22 @@
+{
+    "botName": "ꜱᴛᴀɴᴢᴀ_ᴍɪɴɪ",
+    "ownerName": "Adithya PRamoD",
+    "prefix": ".",
+    "workMode": "PRIVATE",
+    "alwaysOnline": true,
+    "autoRead": true,
+    "autoTyping": true,
+    "statusSeen": true,
+    "statusReact": true,
+    "readCmd": false,
+    "recordingVoice": false,
+    "autoReply": false,
+    "connectMsg": true,
+    "buttons": true,
+    "voiceReply": true,
+    "antiDelete": false,
+    "antiEdit": "USER CHAT",
+    "autoReact": true,
+    "groupSecurity": true,
+    "antiCall": true
+}

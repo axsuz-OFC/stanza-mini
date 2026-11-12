@@ -1,0 +1,23 @@
+import { cmd } from '../command.js';
+import config from '../config.js';
+
+cmd({
+    pattern: "alive",
+    desc: "Check bot status",
+    category: "main"
+}, async (zanta, mek, m, { from, reply }) => {
+    
+    const aliveText = `╭━━━〔 *${config.BOT_NAME}* 〕━━━➢\n` +
+        `┃\n` +
+        `┃ 🟢 *ʙᴏᴛ ɪs ᴀʟɪᴠᴇ!*\n` +
+        `┃\n` +
+        `┃ 📱 *ɴᴀᴍᴇ:* ${config.BOT_NAME}\n` +
+        `┃ 👑 *ᴏᴡɴᴇʀ:* ${config.OWNER_NUMBER}\n` +
+        `┃ ⚙️ *ᴘʀᴇғɪx:* [ ${config.PREFIX} ]\n` +
+        `┃\n` +
+        `┃ © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ${config.BOT_NAME}\n` +
+        `╰━━━━━━━━━━━━━➢`;
+        
+    // මෙතන reply() පාවිච්චි කරන නිසා index.js එකේ තියෙන පින්තූරය සහිත රිප්ලයි එක එයි
+    await reply(aliveText);
+});

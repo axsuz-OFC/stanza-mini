@@ -1,0 +1,9 @@
+export default {
+    BOT_NAME: "ꜱᴛᴀɴᴢᴀ_ᴍɪɴɪ",
+    OWNER_NUMBER: "94704536039", // ඔබේ අංකය (94 ලෙස)
+    CHANNEL_LINK: "https://whatsapp.com/channel/0029VbE88ws4NVipoRX1XL1V",
+    CHANNEL_JID: "0029VbE88ws4NVipoRX1XL1V@newsletter", // Auto Follow සඳහා
+    CHANNEL_NAME: "𝐒𝐓ᴀɴ𝐙𝐀_𝗠𝗗",
+    BOT_IMAGE: "./stanza.jpg", // ඔබ එවූ පින්තූරය මෙම නමින් Folder එකේ තියෙන්න ඕනේ
+    PREFIX: "."
+};

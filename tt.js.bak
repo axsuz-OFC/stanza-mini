@@ -1,0 +1,33 @@
+import { cmd } from '../command.js';
+import { download } from '@silent-tech-offc/ttdl';
+
+cmd({
+    pattern: "tt",
+    alias: ["tiktok"],
+    desc: "Download TikTok videos (no watermark)",
+    category: "download"
+}, async (zanta, mek, m, { from, args, reply }) => {
+    try {
+        const url = args[0];
+        if (!url || !url.includes('tiktok.com')) {
+            return reply("❌ Please provide a valid TikTok link.");
+        }
+
+        await reply("⏳ Downloading TikTok video...");
+
+        const result = await download(url);
+        
+        if (!result || !result.videoNoWatermark) {
+            return reply("❌ *Fetch Failed!* Video not found.");
+        }
+
+        await zanta.sendMessage(from, {
+            video: { url: result.videoNoWatermark },
+            caption: `🎬 *${result.title || 'TikTok Video'}*`
+        }, { quoted: mek });
+
+    } catch (e) {
+        console.error("TikTok Error:", e.message);
+        reply("❌ *Fetch Failed!* TikTok download failed.");
+    }
+});

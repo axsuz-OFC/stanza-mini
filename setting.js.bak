@@ -1,0 +1,22 @@
+import { cmd } from '../command.js';
+import config from '../config.js';
+
+cmd({
+    pattern: "setting",
+    alias: ["settings"],
+    desc: "Show bot settings",
+    category: "main"
+}, async (zanta, mek, m, { from, reply }) => {
+    
+    const settingText = `╭━━━〔 *${config.BOT_NAME} - SETTINGS* 〕━━━➢\n` +
+        `┃\n` +
+        `┃ ⚙️ *ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs*\n` +
+        `┃\n` +
+        `┃ ◈ *ᴘʀᴇғɪx:* ${config.PREFIX}\n` +
+        `┃ ◈ *ᴀᴜᴛᴏ ғᴏʟʟᴏᴡ:* ᴇɴᴀʙʟᴇᴅ\n` +
+        `┃ ◈ *ᴄʜᴀɴɴᴇʟ:* ${config.CHANNEL_NAME}\n` +
+        `┃\n` +
+        `╰━━━━━━━━━━━━━➢`;
+        
+    await reply(settingText);
+});
